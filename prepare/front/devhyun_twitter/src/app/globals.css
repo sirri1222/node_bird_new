@@ -17,6 +17,8 @@
 }
 
 body {
+  padding-left: 11.5rem;
+  padding-right: 11.5rem;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
