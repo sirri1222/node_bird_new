@@ -11,7 +11,7 @@ function Login() {
   };
   return (
     <div className="mx-auto">
-      <MainTitle />
+      <p className="text-center py-5">DevTwitter</p>
       <Form
         name="normal_login"
         className="login-form"
