@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
-import MainTitle from "./MainTitle";
+import { Button, Checkbox, Form } from "antd";
 import LoginInput from "./LoginInput";
 
 function Login() {
@@ -21,23 +19,19 @@ function Login() {
         <LoginInput />
         <Form.Item>
           <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Remember me</Checkbox>
+            <Checkbox>기억하기</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot" href="">
-            Forgot password
+          <a className="login-form-forgot" href="/findpassword">
+            비밀번호 찾기
           </a>
         </Form.Item>
 
         <Form.Item>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
-            Log in
+          <Button htmlType="submit" className="login-form-button border-none">
+            로그인
           </Button>
-          Or <a href="">register now!</a>
+          | <a href="/signup">회원가입</a>
         </Form.Item>
       </Form>
     </div>

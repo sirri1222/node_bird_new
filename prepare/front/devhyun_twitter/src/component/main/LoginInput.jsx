@@ -1,10 +1,10 @@
 import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 const LoginInput = () => {
   return (
-    <div>
+    <>
       <Form.Item
         name="username"
         rules={[{ required: true, message: "Please input your Username!" }]}
@@ -24,7 +24,7 @@ const LoginInput = () => {
           placeholder="Password"
         />
       </Form.Item>
-    </div>
+    </>
   );
 };
 
