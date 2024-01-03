@@ -17,21 +17,18 @@ function Login() {
         onFinish={onFinish}
       >
         <LoginInput />
-        <Form.Item>
           <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>기억하기</Checkbox>
+            <Checkbox>로그인 정보 기억하기</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot" href="/findpassword">
-            비밀번호 찾기
-          </a>
-        </Form.Item>
-
         <Form.Item>
-          <Button htmlType="submit" className="login-form-button border-none">
+          <Button htmlType="submit" className="login-form-button">
             로그인
           </Button>
           | <a href="/signup">회원가입</a>
+          <a className="login-form-forgot" href="/findpassword">
+            비밀번호 찾기
+          </a>
         </Form.Item>
       </Form>
     </div>

@@ -27,3 +27,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.login-form-button {
+  border: none;
+}
