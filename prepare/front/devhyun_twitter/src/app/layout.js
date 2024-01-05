@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const menuname = [
   { name: "회원가입", link: "/signup" },
-  { name: "로그인", link: "/login" },
+  { name: "로그인", link: "/" },
   { name: "마이페이지", link: "/profile" },
 ];
 const items = menuname.map((navtitle, index) => ({
@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
             zIndex: 1,
             width: "100%",
             display: "flex",
+            justifyContent:"end",
             alignItems: "center",
           }}
         >
@@ -36,7 +37,7 @@ export default function RootLayout({ children }) {
             style={{ flex: 1, minWidth: 0 }}
           />
         </Header>
-        <Content style={{ padding: "0 48px" }}>
+        <Content style={{ padding: "0 11.5rem" }}>
           <div
             style={{
               padding: 24,

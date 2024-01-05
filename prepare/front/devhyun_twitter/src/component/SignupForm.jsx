@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from "react";
 import userInput from "../hooks/userInput";
 import { Form, Input, Checkbox } from "antd";
-
+import TopTitle from "./recycle/TopTitle";
 
 const SignupForm = () => {
   const [id, onChangeId] = userInput("");
@@ -38,7 +38,7 @@ const SignupForm = () => {
   }, [password, passwordCheck, TermCheck]);
   return (
     <div>
-      <title>회원가입</title>
+      <TopTitle titlename={"회원가입"} />
       <Form onFinish={onSubmit}>
         <div>
           <label htmlFor="userid">아이디</label>

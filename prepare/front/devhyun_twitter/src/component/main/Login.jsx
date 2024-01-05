@@ -2,14 +2,14 @@
 import React from "react";
 import { Button, Checkbox, Form } from "antd";
 import LoginInput from "./LoginInput";
-
+import TopTitle from "../../component/recycle/TopTitle";
 function Login() {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
   return (
-    <div className="mx-auto">
-      <p className="text-center py-5">DevTwitter</p>
+    <div>
+      <TopTitle titlename={"DevTwitter"} />
       <Form
         name="normal_login"
         className="login-form"
@@ -17,9 +17,9 @@ function Login() {
         onFinish={onFinish}
       >
         <LoginInput />
-          <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>로그인 정보 기억하기</Checkbox>
-          </Form.Item>
+        <Form.Item name="remember" valuePropName="checked" noStyle>
+          <Checkbox>로그인 정보 기억하기</Checkbox>
+        </Form.Item>
 
         <Form.Item>
           <Button htmlType="submit" className="login-form-button">
