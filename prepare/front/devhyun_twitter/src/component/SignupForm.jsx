@@ -5,9 +5,9 @@ import userInput from "../hooks/userInput";
 import { Form, Input } from "antd";
 
 const SignupForm = () => {
-  [id, onChangeId] = userInput("");
-  [password, onChangePassword] = userInput("");
-  [nickname, onChangeNickname] = userInput("");
+  const [id, onChangeId] = userInput("");
+  const [password, onChangePassword] = userInput("");
+  const [nickname, onChangeNickname] = userInput("");
 
   const onSubmit = useCallback(() => {}, []);
   return (
