@@ -4,7 +4,7 @@ const TopTitle = ({ titlename }) => {
   return (
     <>
       <p
-        style={{ padding: "34px 33px", fontSize: "2rem", textAlign: "center" }}
+        style={{ padding: "2rem 2rem", fontSize: "2rem", textAlign: "center" }}
       >
         {titlename}
       </p>
