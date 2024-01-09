@@ -1,7 +1,5 @@
-import React from "react";
-
-const ConfigureStore = () => {
-  return <div>ConfigureStore</div>;
-};
-
-export default ConfigureStore;
+const ConfigureStore = () => {};
+const wrapper = createWrapper(ConfigureStore, {
+  debug: process.env.NODE_ENV === "development",
+});
+export default wrapper;
