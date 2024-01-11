@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 const initialsate = {
   user: {
     IsLogedin: true,
@@ -10,45 +12,19 @@ const initialsate = {
   },
 };
 
-const loginAction = (data) => {
-  return {
-    type: "Log_In",
-    data,
-  };
-};
+const rootReducer = combineReducers({
+  index: (state = {}, action) => {
+    switch (action.type) {
+      case "HYDRATE":
+        return {
+          ...state,
+          ...action.payload,
+        };
 
-const logoutAction = (data) => {
-  return {
-    type: "Log_Out",
-  };
-};
-
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "HYDRATE":
-      return {
-        ...state,
-        ...action.payload,
-      };
-    case "Log_In":
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          IsLogedin: true,
-          user: action.data,
-        },
-      };
-    case "Log_Out":
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          IsLogedin: false,
-          user: null,
-        },
-      };
-    default:
-      return state;
-  }
-};
+      default:
+        return state;
+    }
+  },
+  user,
+  post,
+});
