@@ -11,9 +11,8 @@ function Login() {
     console.log("Received values of form: ", values);
     setUsername(values.username);
   };
-  const logoutHandler = () => {
-    setUsername("");
-  };
+
+
   return (
     <div>
       <TopTitle titlename={"DevTwitter"} />
@@ -29,13 +28,9 @@ function Login() {
         </Form.Item>
 
         <Form.Item>
-          {setUsername("") ? (
-            <Button htmlType="submit" className="login-form-button">
-              로그인
-            </Button>
-          ) : (
-            <Button onClick={logoutHandler}>로그아웃</Button>
-          )}
+          <Button htmlType="submit" className="login-form-button">
+            로그인
+          </Button>
           | <a href="/signup">회원가입</a>
           <a className="login-form-forgot" href="/findpassword">
             비밀번호 찾기

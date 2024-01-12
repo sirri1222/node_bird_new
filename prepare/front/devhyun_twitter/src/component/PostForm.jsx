@@ -14,8 +14,14 @@ const PostForm = () => {
   const onChageText = useCallback((e) => {
     setText(e.target.value);
   }, []);
+  const setUsername = useStore((state) => state.setUsername);
+  s;
+  const logoutHandler = () => {
+    setUsername("");
+  };
   return (
-    <div>
+    <>
+      <button onClick={logoutHandler}>로그아웃</button>
       <Form>
         <Input.TextArea
           value={text}
@@ -28,7 +34,7 @@ const PostForm = () => {
           <Button onClick={onSubmit}>확인 </Button>
         </div>
       </Form>
-    </div>
+    </>
   );
 };
 

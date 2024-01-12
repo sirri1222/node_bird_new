@@ -1,9 +1,9 @@
 "use client";
 import PostForm from "../component/PostForm";
 import Login from "../component/main/Login";
-import userStore from "../store/store";
+import useStore from "../store/store";
 export default function Home() {
-  const setUsername = userStore((state) => state.setUsername);
+  const setUsername = useStore((state) => state.setUsername);
 
   return <>{setUsername("") ? <Login /> : <PostForm />}</>;
 }
