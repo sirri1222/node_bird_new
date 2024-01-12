@@ -3,9 +3,12 @@ import React from "react";
 import { Button, Checkbox, Form } from "antd";
 import LoginInput from "./LoginInput";
 import TopTitle from "../../component/recycle/TopTitle";
+import userStore from "../../store/store";
 function Login() {
+  const setIsUserValid = userStore((state) => state.setIsUserValid);
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+    setIsUserValid(true);
   };
   return (
     <div>
@@ -22,9 +25,13 @@ function Login() {
         </Form.Item>
 
         <Form.Item>
-          <Button htmlType="submit" className="login-form-button">
-            로그인
-          </Button>
+          {setIsUserValid(true) ? (
+            <Button>로그아웃</Button>
+          ) : (
+            <Button htmlType="submit" className="login-form-button">
+              로그인
+            </Button>
+          )}
           | <a href="/signup">회원가입</a>
           <a className="login-form-forgot" href="/findpassword">
             비밀번호 찾기

@@ -2,7 +2,6 @@ import "./globals.css";
 import { Menu } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import Link from "next/link";
-
 const menuname = [
   { name: "회원가입", link: "/signup" },
   { name: "로그인", link: "/" },
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
             zIndex: 1,
             width: "100%",
             display: "flex",
-            justifyContent:"end",
+            justifyContent: "end",
             alignItems: "center",
           }}
         >
