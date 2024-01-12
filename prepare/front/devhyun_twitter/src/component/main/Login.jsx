@@ -5,13 +5,13 @@ import LoginInput from "./LoginInput";
 import TopTitle from "../../component/recycle/TopTitle";
 import useStore from "../../store/store";
 function Login() {
-  const setUsername = useStore((state) => state.setUsername);
+  const { username, setUsername } = useStore();
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     setUsername(values.username);
+    console.log(values.username);
   };
-
 
   return (
     <div>
@@ -28,7 +28,11 @@ function Login() {
         </Form.Item>
 
         <Form.Item>
-          <Button htmlType="submit" className="login-form-button">
+          <Button
+            onClick={onFinish}
+            htmlType="submit"
+            className="login-form-button"
+          >
             로그인
           </Button>
           | <a href="/signup">회원가입</a>

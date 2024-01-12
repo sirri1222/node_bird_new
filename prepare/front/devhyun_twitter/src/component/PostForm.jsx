@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Form, Input, Button } from "antd";
 import useStore from "../store/store";
 const PostForm = () => {
@@ -14,11 +14,12 @@ const PostForm = () => {
   const onChageText = useCallback((e) => {
     setText(e.target.value);
   }, []);
-  const setUsername = useStore((state) => state.setUsername);
-  s;
+  const { username, setUsername } = useStore();
   const logoutHandler = () => {
     setUsername("");
+    console.log(username);
   };
+  useEffect(() => {logoutHandler()}, [username]);
   return (
     <>
       <button onClick={logoutHandler}>로그아웃</button>

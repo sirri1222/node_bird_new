@@ -3,7 +3,7 @@ import PostForm from "../component/PostForm";
 import Login from "../component/main/Login";
 import useStore from "../store/store";
 export default function Home() {
-  const setUsername = useStore((state) => state.setUsername);
+  const { username } = useStore();
 
-  return <>{setUsername("") ? <Login /> : <PostForm />}</>;
+  return <>{username === "" ? <Login /> : <PostForm />}</>;
 }
