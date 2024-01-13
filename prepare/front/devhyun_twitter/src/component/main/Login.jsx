@@ -10,9 +10,9 @@ function Login() {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     setUsername(values.username);
-    console.log(values.username);
   };
 
+  console.log(username);
   return (
     <div>
       <TopTitle titlename={"DevTwitter"} />
@@ -28,11 +28,7 @@ function Login() {
         </Form.Item>
 
         <Form.Item>
-          <Button
-            onClick={onFinish}
-            htmlType="submit"
-            className="login-form-button"
-          >
+          <Button htmlType="submit" className="login-form-button">
             로그인
           </Button>
           | <a href="/signup">회원가입</a>
