@@ -1,22 +1,30 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Form, Input, Button } from "antd";
+
 import useStore from "../store/store";
 const PostForm = () => {
   const { posts, addPost } = useStore();
-
+  console.log(addPost);
   const [text, setText] = useState("");
 
-  const newPost = [{ content: "newpost" }];
-
   const onSubmit = useCallback(() => {
+    const newPost = { content: text };
     addPost({ posts, ...newPost });
-  }, []);
+    setText("");
+  }, [addPost, posts, text]);
 
-  const onChageText = useCallback((e) => {
-    setText(e.target.value);
-  }, []);
+  const onChageText = useCallback(
+    (e) => {
+      setText(e.target.value);
+      console.log(text);
+      addPost({ posts, ...text });
+    },
+    [text]
+  );
+
   const { username, setUsername } = useStore();
+
   const logoutHandler = () => {
     setUsername("");
     console.log(username);
