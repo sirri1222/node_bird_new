@@ -3,14 +3,16 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Form, Input, Button } from "antd";
 import useStore from "../store/store";
 const PostForm = () => {
-  const addPost = useStore((state) => state.addPost);
-
-  const newPost = { content: "새로운 내용" };
+  const { posts, addPost } = useStore();
 
   const [text, setText] = useState("");
+
+  const newPost = [{ content: "newpost" }];
+
   const onSubmit = useCallback(() => {
-    addPost(newPost);
+    addPost({ posts, ...newPost });
   }, []);
+
   const onChageText = useCallback((e) => {
     setText(e.target.value);
   }, []);
@@ -19,7 +21,6 @@ const PostForm = () => {
     setUsername("");
     console.log(username);
   };
-  useEffect(() => {logoutHandler()}, [username]);
   return (
     <>
       <button onClick={logoutHandler}>로그아웃</button>
