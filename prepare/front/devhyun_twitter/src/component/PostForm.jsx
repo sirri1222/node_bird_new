@@ -5,7 +5,6 @@ import { Form, Input, Button } from "antd";
 import useStore from "../store/store";
 const PostForm = () => {
   const { posts, addPost } = useStore();
-  console.log(addPost);
   const [text, setText] = useState("");
 
   const onSubmit = useCallback(() => {
@@ -27,11 +26,10 @@ const PostForm = () => {
 
   const logoutHandler = () => {
     setUsername("");
-    console.log(username);
   };
   return (
     <>
-      <button onClick={logoutHandler}>로그아웃</button>
+      <button onClick={logoutHandler}>{username}님 로그아웃</button>
       <Form>
         <Input.TextArea
           value={text}
