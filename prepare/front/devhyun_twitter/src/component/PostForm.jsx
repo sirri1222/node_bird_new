@@ -17,7 +17,6 @@ const PostForm = () => {
     (e) => {
       setText(e.target.value);
       console.log(text);
-      addPost({ posts, ...text });
     },
     [text]
   );
