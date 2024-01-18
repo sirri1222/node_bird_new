@@ -15,9 +15,9 @@ export default function Home() {
         <>
           <PostForm />
           <p className="py-6">포스트 리스트 </p>
-          {posts.map((p, i) => (
-            <div key={i}>
-              <PostCard content={p.content} />
+          {posts.map((p) => (
+            <div key={p.id}>
+              <PostCard content={p} />
             </div>
           ))}
         </>

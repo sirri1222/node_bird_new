@@ -5,8 +5,25 @@ export const useStore = create((set) => ({
   setIsUserValid: (arg) => set((arg) => ({ isUserValid: arg })),
   username: "",
   setUsername: (newUsername) => set({ username: newUsername }),
-  posts: [],
-  addPost: (newPost) => set((state) => ({ posts:[newPost, ...state.posts] })),
+  posts: [
+    {
+      id: 1,
+      User: {
+        id: 1,
+        nickname: "devj",
+      },
+      content: "첫번째 게시글",
+      Images: [{ src: "" }],
+      Comments: [{}],
+      imgePath: [],
+      postAdded: false,
+    },
+  ],
+  addPost: (newPost) =>
+    set((state) => ({
+      posts: [newPost, ...state.posts],
+      postAdded: true,
+    })),
 }));
 
 export default useStore;
