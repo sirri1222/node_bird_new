@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useState } from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input } from "antd";
 
 import useStore from "../store/store";
 const PostForm = () => {
@@ -37,8 +37,8 @@ const PostForm = () => {
         ></Input.TextArea>
         <div className="flex justify-between">
           <input type="file" multiple hidden />
-          <Button>이미지 업로드 </Button>
-          <Button onClick={onSubmit}>확인 </Button>
+          <ReuseButton text={"이미지 업로드"} />
+          <ReuseButton onClick={onSubmit} text={"확인"} />
         </div>
       </Form>
     </>

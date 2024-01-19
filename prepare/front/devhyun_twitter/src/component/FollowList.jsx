@@ -1,8 +1,5 @@
 "use client";
-import { Avatar, List } from "antd";
-import Card from "antd/es/card/Card";
-
-import { StopOutlined } from "@ant-design/icons";
+import { List } from "antd";
 
 const FollowList = ({ header, data }) => {
   return (
