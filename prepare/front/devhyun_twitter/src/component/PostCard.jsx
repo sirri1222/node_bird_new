@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Card, Popover } from "antd";
 import {
   RetweetOutlined,
@@ -7,6 +6,7 @@ import {
   EllipsisOutlined,
 } from "@ant-design/icons";
 import ButtonGroup from "antd/es/button/button-group";
+import ReuseButton from "../component/recycle/ReuseButton";
 
 const PostCard = ({ content }) => {
   return (
@@ -21,9 +21,9 @@ const PostCard = ({ content }) => {
             key="more"
             content={
               <ButtonGroup>
-                <Button>수정</Button>
-                <Button>삭제</Button>
-                <Button>신고</Button>
+                <ReuseButton text={"수정"} />
+                <ReuseButton text={"삭제"} />
+                <ReuseButton text={"신고"} />
               </ButtonGroup>
             }
           >

@@ -1,18 +1,8 @@
-import React from "react";
 import NicknameEditForm from "../../component/NicknameEditForm";
-import FollowList from "../../component/FollowList";
 import TopTitle from "../../component/recycle/TopTitle";
+import { FollowerList, FollowingList } from "../../dummy/dataList";
+
 const page = () => {
-  const FollowerList = [
-    { nickname: "데브현1" },
-    { nickname: "데브현2" },
-    { nickname: "데브현3" },
-  ];
-  const FollowingList = [
-    { nickname: "데브현1" },
-    { nickname: "데브현2" },
-    { nickname: "데브현3" },
-  ];
   return (
     <div>
       <TopTitle titlename={"마이 페이지"} />
