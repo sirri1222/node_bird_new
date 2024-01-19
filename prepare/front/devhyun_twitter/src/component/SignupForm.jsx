@@ -67,7 +67,7 @@ const SignupForm = () => {
             required
           />
           {passwordError && (
-            <ErrorMassage>비밀번호가 일치하지 않습니다.</ErrorMassage>
+            <p>비밀번호가 일치하지 않습니다.</p>
           )}
         </div>
         <div>
@@ -82,7 +82,7 @@ const SignupForm = () => {
         </div>
         <div>
           <Checkbox>개인정보 수집에 동의 합니다. </Checkbox>
-          {TermError && <ErrorMassage>필수 동의를 체크해 주세요</ErrorMassage>}
+          {TermError && <p>필수 동의를 체크해 주세요</p>}
         </div>
         <div>
           <button>가입하기</button>
