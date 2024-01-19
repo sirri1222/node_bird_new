@@ -1,4 +1,3 @@
-"use client";
 import PostCard from "../component/PostCard";
 import PostForm from "../component/PostForm";
 import Login from "../component/main/Login";
