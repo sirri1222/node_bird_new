@@ -1,5 +1,5 @@
 const NicknameEditForm = () => {
-  return <div>NicknameEditForm</div>;
+  return <>NicknameEditForm</>;
 };
 
 export default NicknameEditForm;

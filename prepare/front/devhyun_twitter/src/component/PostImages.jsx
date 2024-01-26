@@ -1,5 +1,5 @@
 const PostImages = () => {
-  return <div>PostImages</div>;
+  return <>PostImages</>;
 };
 
 export default PostImages;

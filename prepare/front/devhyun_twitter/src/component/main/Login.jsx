@@ -14,7 +14,7 @@ function Login() {
 
   console.log(username);
   return (
-    <div>
+    <>
       <TopTitle titlename={"DevTwitter"} />
       <Form
         name="normal_login"
@@ -37,7 +37,7 @@ function Login() {
           </a>
         </Form.Item>
       </Form>
-    </div>
+    </>
   );
 }
 

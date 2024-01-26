@@ -40,7 +40,7 @@ const SignupForm = () => {
     }
   }, [password, passwordCheck, TermCheck]);
   return (
-    <div>
+    <>
       <TopTitle titlename={"회원가입"} />
       <Form onFinish={onSubmit}>
         {SignupInputdata.map((data) => (
@@ -88,7 +88,7 @@ const SignupForm = () => {
           <button>가입하기</button>
         </div>
       </Form>
-    </div>
+    </>
   );
 };
 

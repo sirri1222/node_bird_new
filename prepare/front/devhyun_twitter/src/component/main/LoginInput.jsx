@@ -6,7 +6,7 @@ const LoginInput = () => {
     <div className="w-1/3">
       <Form.Item
         name="username"
-        rules={[{ required: true, message: "Please input your Username!" }]}
+        rules={[{ required: true, message: "아이디를 입력해주세요" }]}
       >
         <Input
           prefix={<UserOutlined className="site-form-item-icon" />}
@@ -15,7 +15,7 @@ const LoginInput = () => {
       </Form.Item>
       <Form.Item
         name="password"
-        rules={[{ required: true, message: "Please input your Password!" }]}
+        rules={[{ required: true, message: "비밀번호를 입력해주세요" }]}
       >
         <Input
           prefix={<LockOutlined className="site-form-item-icon" />}

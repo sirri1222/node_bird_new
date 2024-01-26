@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import { Form, Input } from "antd";
 
 import useStore from "../store/store";
+import ReuseButton from "../component/recycle/ReuseButton";
 const PostForm = () => {
   const { posts, addPost } = useStore();
   const [text, setText] = useState("");
@@ -38,7 +39,7 @@ const PostForm = () => {
         <div className="flex justify-between">
           <input type="file" multiple hidden />
           <ReuseButton text={"이미지 업로드"} />
-          <ReuseButton onClick={onSubmit} text={"확인"} />
+          <button onClick={onSubmit}>확인</button>
         </div>
       </Form>
     </>
