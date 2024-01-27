@@ -5,7 +5,6 @@ import Link from "next/link";
 const menuname = [
   { name: "회원가입", link: "/signup" },
   { name: "로그인", link: "/" },
-  { name: "마이페이지", link: "/profile" },
 ];
 const items = menuname.map((navtitle, index) => ({
   key: String(index + 1),
