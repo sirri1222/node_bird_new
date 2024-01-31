@@ -1,3 +1,4 @@
+import { Input } from "antd";
 
 const SignupInput = ({ data }) => {
   return (
