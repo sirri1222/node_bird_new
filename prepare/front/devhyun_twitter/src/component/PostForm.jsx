@@ -4,9 +4,16 @@ import { Form, Input } from "antd";
 
 import useStore from "../store/store";
 import ReuseButton from "../component/recycle/ReuseButton";
+import GifList from "./giphy/gifList";
+
 const PostForm = () => {
   const { posts, addPost } = useStore();
   const [text, setText] = useState("");
+  const [gifOpen, setGifOpen] = useState(false);
+
+  const gifhandler = () => {
+    setGifOpen(!gifOpen);
+  };
 
   const onSubmit = useCallback(() => {
     const newPost = { content: text };
@@ -27,6 +34,7 @@ const PostForm = () => {
   const logoutHandler = () => {
     setUsername("");
   };
+  console.log(gifOpen, "???");
   return (
     <>
       <button onClick={logoutHandler}>{username}님 로그아웃</button>
@@ -39,8 +47,14 @@ const PostForm = () => {
         <div className="flex justify-between">
           <input type="file" multiple hidden />
           <ReuseButton text={"이미지 업로드"} />
+          <button onClick={gifhandler}>gif 이모티콘</button>
           <button onClick={onSubmit}>확인</button>
         </div>
+        {gifOpen && (
+          <div>
+            <GifList />
+          </div>
+        )}
       </Form>
     </>
   );

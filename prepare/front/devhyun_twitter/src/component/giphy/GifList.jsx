@@ -9,22 +9,22 @@ const onSearch = (value, _e, info) => console.log(info?.source, value);
 
 const GifList = () => {
   const [modalGif, setModalGif] = useState();
-  const [serchGif, setSearchGif] = useState([]);
-  const searchdata = async () => {
-    try {
-      const res = await axios.get("api.giphy.com/v1/gifs/trending");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const [serchGif, setSearchGif] = useState([]);
+  // const searchdata = async () => {
+  //   try {
+  //     const res = await axios.get("api.giphy.com/v1/gifs/trending");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
   return (
     <>
-      <Search
+      {/* <Search
         placeholder="input search text"
         allowClear
         onSearch={onSearch}
         style={{ width: 200 }}
-      />
+      /> */}
       <GridDemo
         onGifClick={(gif, e) => {
           console.log("gif", gif);
@@ -50,7 +50,7 @@ const GifList = () => {
             setModalGif(undefined);
           }}
         >
-          <Gif gif={modalGif} width={200} />
+          <Gif gif={modalGif} width={50} />
         </div>
       )}
     </>
