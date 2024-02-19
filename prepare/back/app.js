@@ -1,4 +1,6 @@
 const express = require("express");
+const postRouter = require("./routes/post");
+
 const app = express();
 
 app.get("/", (req, res) => {
@@ -15,7 +17,7 @@ app.get("/api/posts", (req, res) => {
   ]);
 });
 
-app.use("/post, postRouter");
+app.use("/post", postRouter);
 // prefix 로 /post 가 붙음 중복된것
 app.listen(3065, () => {
   console.log("서버실행중");
