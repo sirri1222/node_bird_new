@@ -3,7 +3,7 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 const LoginInput = () => {
   return (
-    <div className="w-1/3">
+    <div className="w-1/2 flex flex-col justify-center">
       <Form.Item
         name="username"
         rules={[{ required: true, message: "아이디를 입력해주세요" }]}
